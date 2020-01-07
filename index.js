@@ -4,6 +4,9 @@ const bodyParser = require('body-parser')
 const sqlite = require('sqlite')
 const dbConnection = sqlite.open('banco.sqlite', { Promise })
 
+// Configuração para receber conexão do zeit.now
+const port = process.env.PORT || 3000
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -24,7 +27,6 @@ app.get('/', async(request, response) => {
 })
 
 app.get('/vaga/:id', async(request, response) => {
-    console.log(request.params.id)
     const db = await dbConnection
     const vaga = await db.get('select * from vagas where id = '+request.params.id)
     response.render('vaga', {
@@ -93,7 +95,7 @@ const init = async() => {
 
 init()
 
-app.listen(3000, (error) => {
+app.listen(port, (error) => {
     if(error){
         console.log('Nao foi possivel iniciar o servidor do Jobify')
     }else{
