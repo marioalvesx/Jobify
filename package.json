@@ -11,6 +11,11 @@
     "jobify",
     "job"
   ],
+  "node": {
+    "fs": "empty",
+    "child_process" : "empty",
+    "net" : "empty"
+  },
   "author": "Mario Alves",
   "license": "MIT",
   "dependencies": {
