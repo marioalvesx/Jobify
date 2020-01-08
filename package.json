@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": { "node": ">=12.0.0" },
   "keywords": [
     "jobify",
     "job"
@@ -16,7 +17,6 @@
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "node-pre-gyp": "^0.14.0",
     "sqlite": "^3.0.3"
   }
 }
