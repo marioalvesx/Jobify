@@ -3,22 +3,16 @@
   "version": "1.0.0",
   "description": "Jobify is simple job board for sites.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "node-pre-gyp install --fallback-to-build"
-  },
   "engines": {
-    "node": ">=12.0.0"
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node index.js"
   },
   "keywords": [
     "jobify",
     "job"
   ],
-  "node": {
-    "fs": "empty",
-    "child_process": "empty",
-    "net": "empty"
-  },
   "author": "Mario Alves",
   "license": "MIT",
   "dependencies": {
