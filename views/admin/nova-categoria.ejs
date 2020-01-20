@@ -1,0 +1,15 @@
+<%- include('header') %>
+    <h2>
+        Nova Categoria:
+        <a href="/admin/categorias">Categorias</a>
+    </h2>
+    <div>
+        <form method="POST">
+            <label>Título</label>
+            <input type="text" name="categoria">
+            <!-- <textarea name="descricao"></textarea> -->
+            <br>
+            <button>Salvar categoria</button>
+        </form>
+    </div>
+<%- include('footer') %>
